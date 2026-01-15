@@ -1,0 +1,36 @@
+:root {
+  --motion-fast: 0.4s;
+  --motion-medium: 0.7s;
+  --motion-slow: 1s;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Base hidden state */
+.animate {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Fade up */
+.fade-up {
+  transform: translateY(40px);
+}
+
+/* Fade in */
+.fade-in {
+  transform: translateY(0);
+}
+
+/* Scale in */
+.scale-in {
+  transform: scale(0.96);
+}
+
+/* When visible */
+.animate.show {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--motion-medium) var(--ease),
+    transform var(--motion-medium) var(--ease);
+}
