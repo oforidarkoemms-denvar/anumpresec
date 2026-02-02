@@ -4,129 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anum Presby SHS</title>
-    <link rel="stylesheet" href= "styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href= "annim.css">
+     <link rel="stylesheet" href="../styles/annim.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav-data">
-                <a href="#" class="nav-logo">Ansec</a>
-                <div class="nav-toggle" id="navToggle">
-                    <i class="ri-menu-line navBurger"></i>
-                    <i class="ri-close-line navClose"></i>
-                </div>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li class="dropdown-item" >
-                        <div class="nav-link">
-                             <i class="ri-team-line"></i>about us<i class="ri-arrow-down-s-line dropdown-arrow"></i>
-                        </div>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="" class="dropdown-link"><i class="ri-user-voice-line"></i>who we are</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-link"><i class="ri-shield-user-line"></i>meet our administrators</a>
-                            </li>
-                            <li>
-                               <a href="" class="dropdown-link"><i class="ri-map-pin-line"></i>visit us</a>
-                            </li>
-                        </ul>
-                   </li>
-                      <li class="dropdown-item">
-                        <div class="nav-link">
-                           <i class="ri-book-2-line"></i>academic<i class="ri-arrow-down-s-line dropdown-arrow"></i>
-                        </div>
-                         <ul class="dropdown-menu">
-                             <li>
-                                <a href="" class="dropdown-link"><i class="ri-calendar-line"></i>accademic calender</a>
-                            </li>
-
-                            <!-- ============DROPDOWN SUBMENU============== -->
-                            <li class="dropdown-subitem">
-                                <div class="dropdown-link">
-                                    <i class="ri-building-4-line"></i>department<i class="ri-add-line dropdown-add"></i>
-                                </div>
-                                <ul class="dropdown-submenu">
-                                    <li>
-                                        <a href="#" class="dropdown-sublink"><i class="ri-flask-line"></i>Science</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="dropdown-sublink"><i class="ri-computer-line"></i>Information Technology</a>
-                                    </li>
-
-                                     <li>
-                                        <a href="#" class="dropdown-sublink"><i class="ri-function-line"></i>mathematics</a>
-                                    </li>
-
-                                     <li>
-                                        <a href="#" class="dropdown-sublink"><i class="ri-home-4-line"></i>home economics</a>
-                                    </li>
-
-                                     <li>
-                                        <a href="#" class="dropdown-sublink"><i class="ri-translate-2"></i>languages</a>
-                                    </li>
-                                </ul>
-                            </li>
-                           
-                            <li>
-                               <a href="" class="dropdown-link"><i class="ri-group-line"></i>clubs & activities</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-link"><i class="ri-first-aid-kit-line"></i>health & wellness services</a>
-                            </li>
-                        </ul>
-                    </li>
-                      <li class="dropdown-item">
-                        <div class="nav-link">
-                            <i class="ri-calendar-event-line"></i>events<i class="ri-arrow-down-s-line dropdown-arrow"></i>
-                        </div>
-                         <ul class="dropdown-menu">
-                            <!-- <li>
-                                <a href="" class="dropdown-link">school calender</a>
-                            </li> -->
-                            <li>
-                                <a href="" class="dropdown-link"><i class="ri-calendar-line"></i>upcoming events</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-link"><i class="ri-gift-line"></i>special celebrations</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="nav-link"><i class="ri-image-2-line"></i>gallery</a></li>
-                    <li><a href="#" class="nav-link"><i class="ri-contacts-line"></i>contacts</a></li>
-                </ul>
-            </div>
-        <div class="nav-data">
-             <img src="../img/ansecLogo.jpg" class="badge" alt="">
+<!-- ========== TOPBAR (HIDES ON SCROLL) ========== -->
+<div class="topbar" id="topbar">
+    <div class="topbar-container">
+        <div class="topbar-left">
+            <img src="../img/ANSEC LOGO.png" alt="School Logo" class="topbar-logo">
+            <span class="topbar-text">Anum Presby SHS</span>
         </div>
-        </nav>
-    </header>
 
+        <div class="topbar-right">
+               <a href="#" class="topbar-link">Alumni</a>
+            <a href="#" class="donate-btn"><i class="ri-hand-heart-line"></i>Donate</a>
+        </div>
+    </div>
+</div>
 
+<!-- ========== MAIN NAVBAR ========== -->
+<header class="header">
+    <nav class="nav container">
+        <div class="nav-data">
+            <a href="#" class="nav-logo">Ansec</a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="ri-menu-line navBurger"></i>
+                <i class="ri-close-line navClose"></i>
+            </div>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-list">
+                <li class="dropdown-item">
+                    <div class="nav-link">
+                        <i class="ri-team-line"></i>about us<i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-link"><i class="ri-user-voice-line"></i>who we are</a></li>
+                        <li><a href="#" class="dropdown-link"><i class="ri-shield-user-line"></i>meet our administrators</a></li>
+                        <li><a href="#" class="dropdown-link"><i class="ri-map-pin-line"></i>visit us</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <div class="nav-link">
+                        <i class="ri-book-2-line"></i>academic<i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-link"><i class="ri-calendar-line"></i>academic calendar</a></li>
+
+                        <li class="dropdown-subitem">
+                            <div class="dropdown-link">
+                                <i class="ri-building-4-line"></i>department<i class="ri-add-line dropdown-add"></i>
+                            </div>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#" class="dropdown-sublink"><i class="ri-flask-line"></i>Science</a></li>
+                                <li><a href="#" class="dropdown-sublink"><i class="ri-computer-line"></i>Information Technology</a></li>
+                                <li><a href="#" class="dropdown-sublink"><i class="ri-function-line"></i>Mathematics</a></li>
+                                <li><a href="#" class="dropdown-sublink"><i class="ri-home-4-line"></i>Home Economics</a></li>
+                                <li><a href="#" class="dropdown-sublink"><i class="ri-translate-2"></i>Languages</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#" class="dropdown-link"><i class="ri-group-line"></i>clubs & activities</a></li>
+                        <li><a href="#" class="dropdown-link"><i class="ri-first-aid-kit-line"></i>health & wellness</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <div class="nav-link">
+                        <i class="ri-calendar-event-line"></i>events<i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-link"><i class="ri-calendar-line"></i>upcoming events</a></li>
+                        <li><a href="#" class="dropdown-link"><i class="ri-gift-line"></i>special celebrations</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" class="nav-link"><i class="ri-image-2-line"></i>gallery</a></li>
+                <li><a href="#" class="nav-link"><i class="ri-contacts-line"></i>contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="page-wraper">
 <section class="hero" id="home">
   <video autoplay muted loop playsinline class="hero-video" poster="img/hero.jpg">
-    <source src="IMG_2004.MOV" type="video/mp4">
+    <source src="../video/ansec-Hero.mp4" type="video/mp4">
   </video>
 
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <h1 class="animate fade-up">Anum Presby Senior High School</h1>
+    <h1 class="animate hero-text">Anum Presby Senior High School</h1>
     <p class="animate fade-up">Discipline • Excellence • Leadership</p>
     <a href="admissions.html" class="btn btn animate scale-in">Admissions Open</a>
   </div>
 </section>
 
-
-
-
-<section class="about-split" id="about">
+<!-- ================ABOUT US SECTION====== -->
+<section class="section about-split" id="about">
   <div class="about-container">
     <!-- TEXT SIDE -->
     <div class="about-content fade-up about-content animate fade-up">
@@ -145,175 +127,204 @@
         connected to our community and provide opportunities for students
         to grow intellectually, morally, and socially as part of a lifelong
         family.
-      </p>
+      </p><br><br>
 
-      <a href="about/who-we-are.html" class="apple-link">
+      <a href="about/who-we-are.html" class=" btn">
         Learn more about our school →
       </a>
     </div>
      <!-- IMAGE SIDE -->
     <div class="about-image fade-up about-image animate fade-in">
-      <img src="../img/students-img1.jpeg" alt="Campus life at Anum Presby SHS">
+      <img src="../img/ansec-students-happy.png" alt="Campus life at Anum Presby SHS">
     </div>
-
-
   </div>
 </section>
 
-<!-- ================LEADERSHIP====== -->
-<section class="headteacher-spotlight" id="leadership">
-  <span class="eyebrow">School Leadership</span>
+<section class="leadership" id="leadership">
+<div class="leadership-continer ">
+  <div class="leadership-header fade-up animate">
+    <span class="eyebrow">School Leadership</span>
+    <h2>Meet Our Headteacher</h2>
+    <p class="subtitle">Guiding the vision, integrity, and academic excellence of our institution.</p>
+  </div>
 
-  <h2>Meet Our Current Headteacher</h2>
+  <div class="leadership-card fade-up animate scale-in">
 
-  <div class="headteacher-card fade-up  animate scale-in">
-    <!-- Image -->
-    <div class="headteacher-image">
-      <img src="headtecher-eny0.jpg" alt="Mrs. Stella Naaaa, Headteacher">
+    <!-- Portrait -->
+    <div class="leader-photo-frame">
+      <img src="../img/headtecher-eny0.jpg" alt="Mrs. Stella Naa Enyo Atiase">
     </div>
 
     <!-- Content -->
-    <div class="headteacher-content">
-      <h3>Mrs. Stella Naa Enyo Atiase</h3>
-      <p class="role">Current Headteacher</p>
+    <div class="leader-content">
+      <h3 class="leader-name">Mrs. Stella Naa Enyo Atiase</h3>
+      <p class="leader-role">Headteacher</p>
 
-      <p class="description">
-        Mrs. Stella Naaaa leads Anum Presby Senior High School with over
-        20 years of experience in teaching and school leadership. She is
-        deeply committed to academic excellence, discipline, and holistic
-        student development.
+      <p class="leader-bio">
+        With over 20 years of experience in education and administrative leadership, 
+        Mrs. Atiase leads Anum Presby Senior High School with distinguished 
+        commitment to academic excellence, discipline, and holistic student growth.
       </p>
+      <blockquote class="leader-quote">
+      <span class="quote-mark-leader">“</span>
+      <p>
+        At ANSEC, we believe true education shapes character, sharpens intellect,
+        and prepares students to serve society with integrity and confidence.
+       </p>
+      </blockquote>
+
+      <ul class="leader-highlights">
+        <li>20+ Years of Educational Leadership</li>
+        <li>Advocate for Student-Centered Learning</li>
+        <li>Champion of Discipline & Academic Rigor</li>
+        <li>Strong Community Engagement Background</li>
+      </ul>
 
       <a href="about/administrators.html" class="btn">
         Meet Our Administrators →
       </a>
     </div>
+
   </div>
+</div>
 </section>
 
 
-<section class="academics-preview" id="academics">
+<section class="section academics-preview" id="academics">
   <span class="eyebrow">Our Programmes</span>
   <h2>Academics</h2>
 
   <div class="academics-grid">
 
-    <article class="academic-card animate scale-in">
-      <i class="ri-flask-line"></i>
+    <article class="academic-card animate academic-motion left-in">
+      <div class="icon-wrap">
+        <img src="../img/undraw_science_kut5.svg" alt="Science Programme">
+      </div>
       <h4>Science</h4>
-      <p>
-        A strong foundation in Physics, Chemistry, Biology and Mathematics
-        for future scientists and engineers.
-      </p>
+      <p>Physics, Chemistry, Biology and Mathematics for scientific excellence.</p>
     </article>
 
-    <article class="academic-card animate fade-in">
-      <i class="ri-computer-line"></i>
-      <h4>Information Technology</h4>
-      <p>
-        Practical ICT skills, computing fundamentals and digital literacy
-        for the modern world.
-      </p>
-    </article>
-
-    <article class="academic-card">
-      <i class="ri-briefcase-line"></i>
+    <article class="academic-card animate academic-motion right-in">
+      <div class="icon-wrap">
+        <img src="../img/undraw_finance_m6vw.svg" alt="Business Programme">
+      </div>
       <h4>Business</h4>
-      <p>
-        Training in Accounting, Economics and Entrepreneurship for business
-        and management careers.
-      </p>
+      <p>Accounting, Economics and Entrepreneurship studies.</p>
     </article>
 
-    <article class="academic-card">
-      <i class="ri-home-4-line"></i>
+    <article class="academic-card animate academic-motion left-in">
+      <div class="icon-wrap">
+        <img src="../img/undraw_cooking_j2pu.svg" alt="Home Economics Programme">
+      </div>
       <h4>Home Economics</h4>
-      <p>
-        Nutrition, management and practical life skills for personal and
-        professional development.
-      </p>
+      <p>Nutrition, management and practical life skills.</p>
     </article>
 
-    <article class="academic-card">
-      <i class="ri-translate-2"></i>
-      <h4>Languages</h4>
-      <p>
-        English and Ghanaian languages to build communication, literacy
-        and cultural understanding.
-      </p>
-    </article>
-    <article class="academic-card">
-      <i class="ri-arts-2"></i>
+    <article class="academic-card animate academic-motion right-in">
+      <div class="icon-wrap">
+        <img src="../img/undraw_compose-music_9403.svg" alt="Arts Programme">
+      </div>
       <h4>Arts</h4>
-      <p>
-        English and Ghanaian languages to build communication, literacy
-        and cultural understanding.
-      </p>
+      <p>Visual Arts, Music and creative expression development.</p>
     </article>
+  </div><br><br>
 
-  </div>
-
-  <a href="academics.html" class="apple-link">
+  <a href="academics.html" class="btn">
     Explore Academics →
   </a>
 </section>
 
-<section class="campus-life" id="campus">
+
+<section class="section campus-life clean-layout">
   <span class="eyebrow">Life at ANSEC</span>
   <h2>Campus Life & Facilities</h2>
 
-  <p class="campus-intro">
-    A supportive environment designed to inspire learning, creativity,
-    discipline, and personal growth.
-  </p>
+  <div class="three-column-grid">
 
-  <div class="campus-grid">
-
-    <article class="campus-card animate fade-in"">
-      <img src="science-lab.jpg" alt="Science Laboratory">
-      <h4>Science Laboratory</h4>
+    <!-- Card 1: Facility -->
+    <article class="life-card">
+      <img src="../img/Contemporary_Computer_Lab.jpg" alt="Science Laboratory">
+      <div class="life-content">
+        <h5 class="life-date">FACILITY</h5>
+        <h3 class="life-title">Modern Science Laboratory</h3>
+        <p>
+          Explore hands-on experiments and advanced tools that support creative scientific learning.
+        </p>
+        <a href="#" class="life-btn">Learn More</a>
+      </div>
     </article>
 
-    <article class="campus-card">
-      <img src="ict-lab.jpg" alt="ICT Laboratory">
-      <h4>ICT Laboratory</h4>
+    <!-- Card 2: Student Life -->
+    <article class="life-card">
+      <img src="../img/robotics.jpg" alt="Robotics Club">
+      <div class="life-content">
+        <h5 class="life-date">STUDENT LIFE</h5>
+        <h3 class="life-title">Robotics Club</h3>
+        <p>
+          Build robots, compete, and collaborate with peers to explore engineering and innovation.
+        </p>
+        <a href="#" class="life-btn">Join Club</a>
+      </div>
     </article>
 
-    <article class="campus-card">
-      <img src="library.jpg" alt="School Library">
-      <h4>Library</h4>
-    </article>
-
-    <article class="campus-card">
-      <img src="sports.jpg" alt="Sports and Clubs">
-      <h4>Sports & Clubs</h4>
+    <!-- Card 3: Student Life -->
+    <article class="life-card">
+      <img src="../img/sports-field.jpg" alt="Sports Life">
+      <div class="life-content">
+        <h5 class="life-date">STUDENT LIFE</h5>
+        <h3 class="life-title">Sports & Recreation</h3>
+        <p>
+          Stay active with football, athletics, volleyball, indoor games, and recreational events.
+        </p>
+        <a href="#" class="life-btn">Explore More</a>
+      </div>
     </article>
 
   </div>
 </section>
+<section class="section academic-belonging">
 
-<section class="belonging-section">
-  <div class="belonging-image">
-    <img src="ansec-students-happy.png" alt="Students enjoying campus life at ANSEC">
-  </div>
+  <div class="academic-belonging-inner">
 
-  <div class="belonging-card animate fade-up">
-    <h2>See Yourself at ANSEC</h2>
+    <!-- TEXT CONTENT -->
+    <div class="belonging-content animate fade-up">
+      <span class="eyebrow">Academic Belonging</span>
+      <h2>Where Every Student Belongs & Thrives</h2>
 
-    <p>
-      At Anum Presby Senior High School, students grow in confidence,
-      discipline, and character within a supportive and faith-based
-      community. Here, learning goes beyond the classroom.
-    </p>
+      <p>
+        At Anum Presby Senior High School, academic success is built on belonging.
+        Students are supported, challenged, and inspired in an environment that
+        values discipline, curiosity, and personal growth.
+      </p>
 
-    <a href="about/who-we-are.html" class="btn">
-      Discover Life at ANSEC →
-    </a>
+      <!-- BELONGING PILLARS -->
+      <ul class="belonging-pillars">
+        <li>
+          <strong>Academic Support</strong>
+          <span>Guidance, mentoring, and structured learning</span>
+        </li>
+        <li>
+          <strong>Excellence & Discipline</strong>
+          <span>High standards rooted in Presby values</span>
+        </li>
+        <li>
+          <strong>Community & Identity</strong>
+          <span>A school where students feel seen and valued</span>
+        </li>
+      </ul>
+
+      <a href="about/who-we-are.html" class="btn">
+        Discover Life at ANSEC →
+      </a>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="belonging-image animate fade-in">
+      <img src="../img/ansec-students-happy2.png" alt="ANSEC students learning together">
+    </div>
+
   </div>
 </section>
-
-
-
 
 <section class="impact-stats">
   <div class="stats-container">
@@ -335,41 +346,167 @@
       <p class="stat-title">WASSCE Pass Rate</p>
       <span class="stat-sub">Recent examination results</span>
     </div>
+  </div>
+</section>
+
+<section class="reviews ">
+   
+  <div class="reviews-inner">
+   
+    <div class="review-card left">
+      <img src="../img/ampem.jpeg" alt="Student review">
+      <h4>“A Game-Changer for My Career!”</h4>
+      <p>
+        “I gained the confidence I needed to lead my team effectively.
+        The program’s guidance was invaluable.”
+      </p>
+      <span>— Hon. Thomas Ampem Nyarko | March 2025</span>
+    </div>
+
+    <div class="review-center">
+      <div class="quote-mark">“ ”</div>
+    </div>
+
+    <div class="review-card right">
+      <img src="../img/atiase.jpg" alt="Student review">
+      <h4>“Worth Every Penny”</h4>
+      <p>
+        “The leadership strategies I learned helped me manage my team
+        with clarity and confidence.”
+      </p>
+      <span>— Mrs. Stella Enyo Atease | January 2025</span>
+    </div>
+
+    <div class="review-card left">
+      <img src="../img/still grinding.jpg" alt="Student review">
+      <h4>“I’ve Never Felt More Empowered”</h4>
+      <p>
+        “The tools I gained helped me make better decisions and
+        navigate challenges seamlessly.”
+      </p>
+      <span>— Emmanuel Ofori-Darko | February 2025</span>
+    </div>
+
+    <div class="review-card right">
+      <img src="../img/odarko.jpg" alt="Student review">
+      <h4>“Highly Recommend to Any Student”</h4>
+      <p>
+        “This experience helped me unlock my full potential and
+        approach challenges with confidence.”
+      </p>
+      <span>— Dabo Isaac | December 2024</span>
+    </div>
 
   </div>
 </section>
 
 
-<section class="news-events" id="news">
-  <span class="eyebrow">Latest Updates</span>
-  <h2>What's happening at upon the mountain</h2>
+<section class="section news-events-section" id="news">
+  <span class="eyebrow">Stay Updated</span>
+  <h2>News & Events</h2>
 
-  <div class="news-list">
+  <div class="news-events-grid">
 
-    <article class="news-item animate fade-up">
-      <time datetime="2026-01-15">15 Jan 2026</time>
-      <div class="news-content">
-        <h3>Admissions Open for 2026/2027</h3>
-        <p>Applications are now open for prospective students.</p>
+    <!-- LEFT: NEWS & EVENTS CARDS -->
+    <div class="news-cards">
+
+      <article class="news-card animate fade-in">
+        <img src="../img/476311831_635176082226034_6129671777638312082_n.jpg" alt="Graduation">
+        <div class="news-overlay">
+          <span class="tag">News</span>
+           <h3>Cultural & Heritage Day</h3>
+        </div>
+      </article>
+
+      <article class="news-card animate fade-in">
+        <img src="../img/students-img1.jpeg" alt="Science Fair">
+        <div class="news-overlay">
+          <span class="tag">Event</span>
+          <h3>Annual Science & Innovation Fair</h3>
+        </div>
+      </article>
+
+      <article class="news-card animate fade-in">
+        <img src="../img/students-img2.jpg" alt="Cultural Day">
+        <div class="news-overlay">
+          <span class="tag">Event</span>
+          <h3>Class of 2024 Graduation</h3>
+        </div>
+      </article>
+      <article class="news-card video-card animate fade-in">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="../img/news-video-poster.jpg">
+    <source src="../video/IMG_2004.MOV" type="video/mp4">
+  </video>
+
+  <div class="news-overlay">
+    <span class="tag">Featured Video</span>
+    <h3>Speech & Prize Giving Day Highlights</h3>
+  </div>
+</article>
+
+    </div>
+
+    <!-- RIGHT: UPCOMING EVENTS -->
+    <aside class="upcoming-panel animate fade-up">
+
+      <div class="panel-header">
+        <i class="ri-calendar-event-line"></i>
+        <h3>Upcoming Events</h3>
       </div>
-    </article>
 
-    <article class="news-item">
-      <time datetime="2026-03-20">20 Mar 2026</time>
-      <div class="news-content">
-        <h3>Speech & Prize Giving Day</h3>
-        <p>Celebrating academic excellence and leadership.</p>
-      </div>
-    </article>
+      <ul class="event-list">
+        <li>
+          <div class="event-date">
+            <span class="day">12</span>
+            <span class="month">Mar</span>
+          </div>
+          <div class="event-info">
+            <strong>Inter-House Sports</strong>
+            <span>School Field</span>
+          </div>
+        </li>
+
+        <li>
+          <div class="event-date">
+            <span class="day">05</span>
+            <span class="month">Apr</span>
+          </div>
+          <div class="event-info">
+            <strong>PTA Meeting</strong>
+            <span>Assembly Hall</span>
+          </div>
+        </li>
+
+        <li>
+          <div class="event-date">
+            <span class="day">02</span>
+            <span class="month">May</span>
+          </div>
+          <div class="event-info">
+            <strong>WASSCE Mock Exams</strong>
+            <span>All Final Year Students</span>
+          </div>
+        </li>
+      </ul>
+
+      <a href="events.html" class="btn">
+        View Full Calendar →
+      </a>
+
+    </aside>
 
   </div>
-
-  <a href="events.html" class="apple-link">
-    View All News & Events →
-  </a>
 </section>
 
-<section class="visit-section" id="visit">
+
+
+<section class="section visit-section" id="visit">
   <span class="eyebrow">Visit Us</span>
   <h2>Our Location & Visiting Hours</h2>
 
@@ -402,12 +539,12 @@
           <li><strong>Sunday:</strong> Closed</li>
         </ul>
       </div>
-
+      
       <div class="visit-contact">
         <p><i class="ri-phone-line"></i> +233 XX XXX XXXX</p>
         <p><i class="ri-mail-line"></i> info@ansec.edu.gh</p>
       </div>
-
+      <br><br>
       <a
         href="https://maps.app.goo.gl/pyBYFeLV6gb4Kt6Z8"
         target="_blank"
@@ -423,15 +560,22 @@
 
 <footer class="site-footer">
   <div class="footer-container">
+<!-- SCHOOL INFO + CREST -->
+<div class="footer-block footer-brand">
 
-    <!-- SCHOOL INFO -->
-    <div class="footer-block">
-      <h4>Anum Presby SHS</h4>
-      <p>
-        A mission-based institution committed to academic excellence,
-        discipline, and leadership development.
-      </p>
-    </div>
+  <img src="../img/ansecLogo.jpg" 
+       alt="Anum Presby Senior High School Crest"
+       class="footer-logo">
+
+  <h4>Anum Presby SHS</h4>
+
+  <p>
+    A mission-based institution committed to academic excellence,
+    discipline, and leadership development.
+  </p>
+
+</div>
+
 
     <!-- QUICK LINKS -->
     <div class="footer-block">
@@ -442,6 +586,15 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="events.html">News & Events</a></li>
         <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </div>
+       <div class="footer-block">
+      <h4>Campus Life</h4>
+      <ul class="footer-links">
+        <li><a href="#Library">About Us</a></li>
+        <li><a href="#Clinic">Academics</a></li>
+        <li><a href="#ICT Lab">Gallery</a></li>
+        <li><a href="#Guidance and Counseling">News & Events</a></li>
       </ul>
     </div>
 
@@ -469,10 +622,10 @@
   </div>
 </footer>
 
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
     
 </body>
 </html>

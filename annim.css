@@ -34,3 +34,20 @@
     opacity var(--motion-medium) var(--ease),
     transform var(--motion-medium) var(--ease);
 }
+
+
+/* ===== ACADEMICS CARD MOTION (ONLY) ===== */
+/* .academic-motion {
+  opacity: 0;
+  transform: translate(48px) scale(0.96);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition-delay: var(--delay, 0s);
+} */
+
+/* When visible */
+.animate.show.academic-motion {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
