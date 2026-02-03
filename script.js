@@ -68,6 +68,15 @@ window.addEventListener("resize", adjustNavbarPosition);
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("show-menu");
   navToggle.classList.toggle("show-icon");
+
+  // Freeze topbar & header when menu is open
+  if (navMenu.classList.contains("show-menu")) {
+    topbar.classList.remove("topbar-hidden");
+    header.style.top = topbar.offsetHeight + "px";
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
 });
 
 /* Scroll hide topbar */
@@ -85,6 +94,28 @@ window.addEventListener("scroll", () => {
   }
 
   lastScroll = current;
+});
+/* ===== Mobile dropdown toggle (NO hover) ===== */
+const dropdownItems = document.querySelectorAll(".dropdown-item > .nav-link");
+const subDropdownItems = document.querySelectorAll(".dropdown-subitem > .dropdown-link");
+
+dropdownItems.forEach(item => {
+  item.addEventListener("click", (e) => {
+    if (window.innerWidth <= 1118) {
+      e.preventDefault();
+      const parent = item.parentElement;
+      parent.classList.toggle("dropdown-open");
+    }
+  });
+});
+
+subDropdownItems.forEach(item => {
+  item.addEventListener("click", (e) => {
+    if (window.innerWidth <= 1118) {
+      e.preventDefault();
+      item.parentElement.classList.toggle("sub-open");
+    }
+  });
 });
 
 
