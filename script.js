@@ -50,71 +50,96 @@
 
 /* Mobile Menu Toggle */
 /* ELEMENTS */
-const topbar = document.getElementById("topbar");
-const header = document.querySelector(".header");
-const navToggle = document.getElementById("navToggle");
-const navMenu = document.getElementById("navMenu");
+document.addEventListener("DOMContentLoaded", () => {
+  const topbar = document.getElementById("topbar");
+  const header = document.querySelector(".header");
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu");
 
-/* Set navbar position based on REAL topbar height */
-function adjustNavbarPosition() {
-  const topbarHeight = topbar.offsetHeight;
-  header.style.top = topbarHeight + "px";
-}
+  let lastScroll = 0;
 
-adjustNavbarPosition();
-window.addEventListener("resize", adjustNavbarPosition);
+  /* ================================
+     UPDATE NAV OFFSET
+  ================================= */
+  function updateNavOffset() {
+    const topbarHidden = topbar.classList.contains("topbar-hidden");
+    const offset = topbarHidden
+      ? header.offsetHeight
+      : topbar.offsetHeight + header.offsetHeight;
 
-/* Mobile toggle */
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show-menu");
-  navToggle.classList.toggle("show-icon");
+    document.documentElement.style.setProperty(
+      "--nav-offset",
+      offset + "px"
+    );
 
-  // Freeze topbar & header when menu is open
-  if (navMenu.classList.contains("show-menu")) {
-    topbar.classList.remove("topbar-hidden");
-    header.style.top = topbar.offsetHeight + "px";
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
-});
-
-/* Scroll hide topbar */
-let lastScroll = 0;
-
-window.addEventListener("scroll", () => {
-  let current = scrollY;
-
-  if (current > lastScroll && current > 50) {
-    topbar.classList.add("topbar-hidden");
-    header.classList.add("nav-shift-up");
-  } else {
-    topbar.classList.remove("topbar-hidden");
-    header.classList.remove("nav-shift-up");
+    header.style.top = topbarHidden ? "0px" : topbar.offsetHeight + "px";
   }
 
-  lastScroll = current;
-});
-/* ===== Mobile dropdown toggle (NO hover) ===== */
-const dropdownItems = document.querySelectorAll(".dropdown-item > .nav-link");
-const subDropdownItems = document.querySelectorAll(".dropdown-subitem > .dropdown-link");
+  updateNavOffset();
+  window.addEventListener("resize", updateNavOffset);
 
-dropdownItems.forEach(item => {
-  item.addEventListener("click", (e) => {
-    if (window.innerWidth <= 1118) {
-      e.preventDefault();
-      const parent = item.parentElement;
-      parent.classList.toggle("dropdown-open");
+  /* ================================
+     MOBILE MENU TOGGLE
+  ================================= */
+  navToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("show-menu");
+    navToggle.classList.toggle("show-icon", isOpen);
+
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      updateNavOffset(); // 🔑 prevent gap
     }
   });
-});
 
-subDropdownItems.forEach(item => {
-  item.addEventListener("click", (e) => {
-    if (window.innerWidth <= 1118) {
-      e.preventDefault();
-      item.parentElement.classList.toggle("sub-open");
+  /* ================================
+     TOPBAR HIDE ON SCROLL
+  ================================= */
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      topbar.classList.add("topbar-hidden");
+      header.classList.add("nav-shift-up");
+    } else {
+      topbar.classList.remove("topbar-hidden");
+      header.classList.remove("nav-shift-up");
     }
+
+    lastScroll = currentScroll;
+
+    if (!navMenu.classList.contains("show-menu")) {
+      updateNavOffset();
+    }
+  });
+
+  /* ================================
+     MOBILE DROPDOWNS (CLICK ONLY)
+  ================================= */
+  const dropdownLinks = document.querySelectorAll(
+    ".dropdown-item > .nav-link"
+  );
+  const subDropdownLinks = document.querySelectorAll(
+    ".dropdown-subitem > .dropdown-link"
+  );
+
+  dropdownLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      if (window.innerWidth <= 1118) {
+        e.preventDefault();
+        link.parentElement.classList.toggle("dropdown-open");
+      }
+    });
+  });
+
+  subDropdownLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      if (window.innerWidth <= 1118) {
+        e.preventDefault();
+        link.parentElement.classList.toggle("sub-open");
+      }
+    });
   });
 });
 
