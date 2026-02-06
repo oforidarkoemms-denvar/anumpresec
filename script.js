@@ -81,17 +81,20 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ================================
      MOBILE MENU TOGGLE
   ================================= */
-  navToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.toggle("show-menu");
-    navToggle.classList.toggle("show-icon", isOpen);
+navToggle.addEventListener("click", () => {
+  const isOpen = navMenu.classList.toggle("show-menu");
+  navToggle.classList.toggle("show-icon", isOpen);
 
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-      updateNavOffset(); // 🔑 prevent gap
-    }
-  });
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+    topbar.classList.add("topbar-hidden");   // ⭐ add this
+    header.classList.add("nav-shift-up");    // ⭐ add this
+  } else {
+    document.body.style.overflow = "";
+    updateNavOffset();
+  }
+});
+
 
   /* ================================
      TOPBAR HIDE ON SCROLL
